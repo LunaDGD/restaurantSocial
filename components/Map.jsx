@@ -3,8 +3,6 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 
 function Map({ coordinates, setCoordinates, setBounds }) {
-  // const key = process.env.GOOGLE_MAP_API_KEY;
-  // console.log(key);
   return (
     <Box width={'full'} height={'full'}>
       <GoogleMapReact

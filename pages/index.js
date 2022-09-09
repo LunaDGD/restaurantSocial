@@ -6,6 +6,21 @@ import Map from '../components/Map';
 import PlaceDetail from '../components/PlaceDetail';
 import { getPlacesData } from './api';
 
+const places = [
+  { name: 'sample place 1' },
+  { name: 'sample place 1' },
+  { name: 'sample place 1' },
+  { name: 'sample place 1' },
+  { name: 'sample place 1' },
+  { name: 'sample place 1' },
+  { name: 'sample place 1' },
+  { name: 'sample place 1' },
+  { name: 'sample place 1' },
+  { name: 'sample place 1' },
+  { name: 'sample place 1' },
+  { name: 'sample place 1' },
+];
+
 function Home() {
   const [places, setPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
@@ -49,7 +64,7 @@ function Home() {
         setRatings={setRatings}
         setCoordinates={setCoordinates}
       />
-      <List place={places} isLoading={isLoading} />
+      <List places={places} isLoading={isLoading} />
 
       <Map
         setCoordinates={setCoordinates}
