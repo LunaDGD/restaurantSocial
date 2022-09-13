@@ -174,7 +174,7 @@ function Header({ setType, setRatings, setCoordinates }) {
             _hover={{ bg: 'gray.100' }}
             transition={'ease-in-out'}
             transitionDuration={'0.3s'}
-            onClick={() => setType('hotel')}
+            onClick={() => setType('hotels')}
           >
             <BiHotel fontSize={25} />
             <Text ml={3} fontSize={16} fontWeight={500}>

@@ -6,21 +6,6 @@ import Map from '../components/Map';
 import PlaceDetail from '../components/PlaceDetail';
 import { getPlacesData } from './api';
 
-const places = [
-  { name: 'sample place 1' },
-  { name: 'sample place 1' },
-  { name: 'sample place 1' },
-  { name: 'sample place 1' },
-  { name: 'sample place 1' },
-  { name: 'sample place 1' },
-  { name: 'sample place 1' },
-  { name: 'sample place 1' },
-  { name: 'sample place 1' },
-  { name: 'sample place 1' },
-  { name: 'sample place 1' },
-  { name: 'sample place 1' },
-];
-
 function Home() {
   const [places, setPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
@@ -28,6 +13,7 @@ function Home() {
   const [type, setType] = useState('restaurants');
   const [ratings, setRatings] = useState('');
   const [isLoading, setisLoading] = useState(false);
+  const [filteredPlaces, setFilteredPlaces] = useState([]);
 
   useEffect(() => {
     // get the users current location on intial login
@@ -41,13 +27,19 @@ function Home() {
   }, []);
 
   useEffect(() => {
+    const filterData = places.filter((place) => place.rating > ratings);
+    setFilteredPlaces(filterData);
+    console.log({ ratings });
+  }, [ratings]);
+
+  useEffect(() => {
     setisLoading(true);
-    getPlacesData(bounds?.sw, bounds?.ne).then((data) => {
+    getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
       console.log(data);
       setPlaces(data);
       setisLoading(false);
     });
-  }, [coordinates, bounds]);
+  }, [type, coordinates, bounds]);
 
   return (
     <Flex
@@ -64,12 +56,16 @@ function Home() {
         setRatings={setRatings}
         setCoordinates={setCoordinates}
       />
-      <List places={places} isLoading={isLoading} />
+      <List
+        places={filteredPlaces.length ? filteredPlaces : places}
+        isLoading={isLoading}
+      />
 
       <Map
         setCoordinates={setCoordinates}
         coordinates={coordinates}
         setBounds={setBounds}
+        places={filteredPlaces.length ? filteredPlaces : places}
       />
     </Flex>
   );
