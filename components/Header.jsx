@@ -159,49 +159,6 @@ function Header({ setType, setRatings, setCoordinates }) {
               Restaurants
             </Text>
           </Flex>
-
-          {/* Hotels */}
-          {/* <Flex
-            alignItems={'center'}
-            justifyContent={'center'}
-            px={4}
-            py={2}
-            bg={'white'}
-            rounded={'full'}
-            ml={4}
-            shadow="lg"
-            cursor={'pointer'}
-            _hover={{ bg: 'gray.100' }}
-            transition={'ease-in-out'}
-            transitionDuration={'0.3s'}
-            onClick={() => setType('hotels')}
-          >
-            <BiHotel fontSize={25} />
-            <Text ml={3} fontSize={16} fontWeight={500}>
-              Hotels
-            </Text>
-          </Flex> */}
-          {/* Attractions */}
-          {/* <Flex
-            alignItems={'center'}
-            justifyContent={'center'}
-            px={4}
-            py={2}
-            bg={'white'}
-            rounded={'full'}
-            ml={4}
-            shadow="lg"
-            cursor={'pointer'}
-            _hover={{ bg: 'gray.100' }}
-            transition={'ease-in-out'}
-            transitionDuration={'0.3s'}
-            onClick={() => setType('attractions')}
-          >
-            <BiMapAlt fontSize={25} />
-            <Text ml={3} fontSize={16} fontWeight={500}>
-              Attractions
-            </Text>
-          </Flex> */}
         </Flex>
       </Flex>
     </Flex>
