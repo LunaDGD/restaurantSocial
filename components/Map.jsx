@@ -37,59 +37,6 @@ function Map({ coordinates, setCoordinates, setBounds, places }) {
             <IoLocation color="red" fontSize={30} />
           </Box>
         ))}
-        {/* {isCard && (
-          <Box
-            width={'200px'}
-            height={'150px'}
-            bg={'whiteAlpha.900'}
-            position={'absolute'}
-            top={-12}
-            left={0}
-            shadow={'lg'}
-            rounded={'lg'}
-          >
-            <Image
-              objectFit={'cover'}
-              width={'full'}
-              height={'120px'}
-              rounded="lg"
-              src={
-                cardData?.photo
-                  ? cardData?.photo?.images?.large?.url
-                  : 'https://explorelompoc.com/wp-content/uploads/2021/06/food_placeholder.jpg'
-              }
-            />
-
-            <Text
-              textTransform={'capitalize'}
-              width={'40'}
-              fontSize={'lg'}
-              fontWeight={'500'}
-              isTruncated
-            >
-              {cardData.name}
-            </Text>
-
-            <Box
-              cursor={'pointer'}
-              position={'absolute'}
-              top={2}
-              right={2}
-              width={'30px'}
-              height={'30px'}
-              bg={'red.300'}
-              rounded={'full'}
-              display={'flex'}
-              justifyContent={'center'}
-              alignItems={'center'}
-              onClick={() => {
-                setIsCard(false);
-              }}
-            >
-              <BiX fontSize={20} />
-            </Box>
-          </Box>
-        )} */}
       </GoogleMapReact>
     </Box>
   );

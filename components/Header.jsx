@@ -161,7 +161,7 @@ function Header({ setType, setRatings, setCoordinates }) {
           </Flex>
 
           {/* Hotels */}
-          <Flex
+          {/* <Flex
             alignItems={'center'}
             justifyContent={'center'}
             px={4}
@@ -180,9 +180,9 @@ function Header({ setType, setRatings, setCoordinates }) {
             <Text ml={3} fontSize={16} fontWeight={500}>
               Hotels
             </Text>
-          </Flex>
+          </Flex> */}
           {/* Attractions */}
-          <Flex
+          {/* <Flex
             alignItems={'center'}
             justifyContent={'center'}
             px={4}
@@ -201,7 +201,7 @@ function Header({ setType, setRatings, setCoordinates }) {
             <Text ml={3} fontSize={16} fontWeight={500}>
               Attractions
             </Text>
-          </Flex>
+          </Flex> */}
         </Flex>
       </Flex>
     </Flex>
