@@ -29,7 +29,7 @@ function Map({ coordinates, setCoordinates, setBounds, places }) {
       >
         {places?.map((place, i) => (
           <Box
-            key="key"
+            key={`${place.latitude}-${i}`}
             lat={Number(place.latitude)}
             lng={Number(place.longitude)}
             position={'relative'}

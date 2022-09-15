@@ -1,4 +1,5 @@
 import {
+  Button,
   Flex,
   Input,
   InputGroup,
@@ -8,6 +9,7 @@ import {
   MenuItem,
   MenuList,
   Text,
+  useDisclosure,
 } from '@chakra-ui/react';
 import { Rating } from '@material-ui/lab';
 import { Autocomplete } from '@react-google-maps/api';
@@ -22,6 +24,7 @@ import {
 } from 'react-icons/bi';
 
 function Header({ setType, setRatings, setCoordinates }) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex
       position={'absolute'}

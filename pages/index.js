@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
+import Friends from '../components/Friends';
 import Header from '../components/Header';
 import List from '../components/List';
 import Map from '../components/Map';
@@ -67,6 +68,7 @@ function Home() {
         setBounds={setBounds}
         places={filteredPlaces.length ? filteredPlaces : places}
       />
+      <Friends />
     </Flex>
   );
 }
